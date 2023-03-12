@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 7px;
+}
+
+.body {
+    background-color: rgb(247, 240, 231);
+    font-family: 'Arial', sans-serif;
+    padding: 5rem;
+}
+
+.container {
+    width: 35rem;
+    margin: 0 auto;
+}
+
+.bayan__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.bayan__container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+
+.bayan__title {
+    color: rgb(0, 26, 255);
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    display:block;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all .3s;
+}
+
+
+
+.bayan__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bayan__icon {
+    display: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition:  all .3s;
+}
+
+.bayan__item {
+    position: relative;
+    padding: 2rem 0 0 0;
+    border-top: 0.1rem solid rgb(214, 214, 214);
+    text-decoration: none;
+    transition: all .3s;
+    height: 100%;
+}
+
+
+.bayan__img {
+    /* display: block; */
+    visibility: hidden;
+    opacity: 0;
+    overflow:hidden;
+    height: 0.1rem;
+    transition: opacity .3s;   
+}
+
+
+
+.bayan__item .bayan__content:target .bayan__title {
+    color: black;
+    transition: all .2s;
+}
+
+
+.bayan__item .bayan__content:target .bayan__img {
+    display: block;
+    margin: 0 auto 2rem auto;
+    visibility: visible;
+    opacity: 1;
+    overflow:visible;
+    height: 100%;
+}
+
+
+.bayan__item .bayan__content:target .bayan__icon {
+    display: block;
+    background-image: url('img/close.png');
+
+}
+
+@media (hover: hover) {
+    /* when hover is supported */
+   
+    .bayan__container:hover {
+        cursor: pointer;
+        
+    }
+
+    .bayan__container:hover .bayan__title {
+        color: black;
+    }
+
+
+    .bayan__item:hover .bayan__img {
+        display: block;
+        margin: 0 auto 2rem auto;
+        visibility: visible;
+    opacity: 1;
+    overflow:visible;
+    height: 100%;
+        
+    }
+
+    .bayan__container:hover .bayan__icon {
+        display: block;
+        background-image: url('img/open.png');
+    }
+
+
+    .bayan__item:hover .bayan__icon {
+        display: block;
+        background-image: url('img/close.png');
+    }
+    
+
+  }
+
+
+@media (min-width: 768px) {
+    * {
+        font-size: 10px;
+    }
+
+    .container {
+        width: 55rem;
+    }
+    
+    .bayan__img {
+        width: 30rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    * {
+        font-size: 12px;
+    }
+    .container {
+        width: 75rem;
+    }
+    
+    .bayan__img {
+        width: 42rem;
+    }
+}
